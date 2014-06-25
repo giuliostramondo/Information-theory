@@ -74,6 +74,18 @@ State::~State(){
 Fsa::~Fsa(){
 }
 
+State Fsa::get_initial_state(){
+	return initial_state;
+}
+
+std::unordered_set<char> Fsa::get_alphabet(){
+	return alphabet;
+}
+
+std::map<State, std::map<char,State> > Fsa::get_transitions(){
+	return transitions;
+}
+
 State::State(unsigned int id,std::string name){
 	this->id = id;
 	label = name;
