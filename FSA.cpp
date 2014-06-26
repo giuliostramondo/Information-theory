@@ -78,12 +78,21 @@ State Fsa::get_initial_state(){
 	return initial_state;
 }
 
+std::unordered_set<State> Fsa::get_final_states(){
+	return final_states;
+
+}
+
 std::unordered_set<char> Fsa::get_alphabet(){
 	return alphabet;
 }
 
 std::map<State, std::map<char,State> > Fsa::get_transitions(){
 	return transitions;
+}
+
+std::map<unsigned int, State> Fsa::get_states(){
+	return states;
 }
 
 State::State(unsigned int id,std::string name){
